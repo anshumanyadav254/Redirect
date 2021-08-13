@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>call </title>
+</head>
+<body>
+
+</body>
+<script>
+    
+    function fun(){
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const phone = urlParams.get('phone')
+        const payload=urlParams.get("payload")
+        console.log(phone + payload);
+location.href = "app://call-assist.doma/initiateCall?phone="+phone+"&payload="+payload;
+}
+fun()
+</script>
+</html>
